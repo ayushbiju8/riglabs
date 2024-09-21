@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui;
+}
+
+:root {
+    --ash: #F2F4F6;
+    --dash: #D7D7D7;
+    --vdash: #868686;
+    --vvdash: #444444;
+    --black: black;
+    --white: white;
+    --dblue: #2948F1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 90px 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-part {
+    grid-area: 1 / 1 / span 2 / 1;
+    background-color: var(--black);
+}
+
+.top-right-part {
+    grid-area: 1 / 2 / 2 / 2;
+    background-color: var(--ash);
+    border-bottom: 2px solid var(--dash);
+}
+
+.bottom-right-part {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--ash);
+}
+
+
+/* Left Part  */
+
+.wholeleftbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lefttbpart {
+    width: 100px;
+    height: 100px;
+}
+
+.leftcontainer {
+    /* border: 1px solid aqua; */
+    height: calc(100vh - 350px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.svgbox {
+    border-radius: 50%;
+    /* border: 1px solid white; */
+    display: flex;
+    /* width: 50%;
+    height: 50px; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.svgbox.active {
+    border: 2px solid white;
+}
+/* .svgbox>svg path{
+    fill: black;
+} */
+/* Right Top Bar  */
+
+.wholetoprightpart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.toprightleft {
+    width: 150px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.toprightright {
+    /* border: 2px solid red; */
+    display: flex;
+    height: 100%;
+    width: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profileright {
+    display: flex;
+}
+
+.profilename {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profilepic>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+/* Right Bottom Part  */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* 1st column is twice the size of the 2nd column */
+    height: 100%;
+    /* Full height of the container */
+}
+
+.first-column {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    border-right: 2px solid var(--dash);
+    /* Top row 6px, bottom row takes the rest */
+}
+
+
+/* Right Botton Navbar */
+.top-row {
+    /* background-color: #e92a2a; */
+    /* Example background color for the top row */
+    border-bottom: 2px solid var(--dash);
+    width: 100%;
+    height: 100%;
+}
+
+.top-row>ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.top-row>ul>li {
+    color: var(--vdash);
+    list-style: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+/* Right Button Bottom Row  */
+
+.bottom-row {
+    width: 100%;
+    height: 100%;
+}
+
+.cardboxcontainer {
+    width: 100%;
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* gap: 20px; */
+}
+
+.cardbox {
+    width: 90%;
+    height: 240px;
+    border-radius: 16px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 30px;
+}
+
+.cardbox-leftpart {
+    width: 30%;
+    background: linear-gradient(to left, #F04729 50%, #FE6A30 50%);
+    height: 200px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.price {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.411);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: var(--white);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px;
+    width: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cardbox-leftpart>img {
+    width: 110px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cardbox-rightpart {
+    width: 60%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.crphead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.crppara>p {
+    color: var(--vvdash);
+    /* border: 1px solid red; */
+    height: 110px;
+    font-weight: 300;
+    width: 70%;
+    font-size: 14px;
+}
+
+.crpbottom {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primb>button {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    /* width: 80px; */
+    padding: 0 10px;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 
+.second-column {
+
+}  */
+.bg-color-class2 {
+    background: linear-gradient(to left, #2948F1 50%, #457DFE 50%);
+}
+
+.bg-color-class3 {
+    background: linear-gradient(to left, #FDEA31 50%, #2D2D2D 50%);
+}
+
+
+
+.second-column{
+    width: 100%;
+    height: 100%;
+}
+.xheading{
+    width: 100%;
+    height: 80px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.xfirst{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.xsecond{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--dblue);
+    padding-right: 20px;
+    font-weight: 600;
+}
+.dayboxholder{
+    width: 100%;
+    height: 120px;
+}
+.daybox{
+    width: 90%;
+    height: 110px;
+    border-radius: 20px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.days{
+    height: 70px;
+    width: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    /* border: 1px solid blue; */
+}
+.dates{
+    font-size: 14px;
+    font-weight: 600;
+}
+.days.active {
+    background-color: blue;  /* Blue background when active */
+    color: white;  /* White text when active */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Internet Explorer, Edge, and Firefox */
+html,
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+/* last  */
+
+.profile{
+    width: 20%;
+    height: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile>img{
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.mentorboxholder{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.mentorbox{
+    width: 90%;
+    height: 280px;
+    border-radius: 16px;
+    background-color: var(--white);
+    overflow: scroll;
+}
+.mentor{
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--dash);
+}
+.light{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--vdash);
+}
+.desc{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+}
+.exp{
+    width: 15%;
+}
+
+/* animations  */
+
+.svgbox{
+    border: 2px solid transparent;
+    transition: border 0.3s linear;
+}
+.svgbox:hover{
+    border: 2px solid var(--dblue);
+}
+.days{
+    border: 2px solid transparent;
+    transition: border 0.3s linear;
+}
+.days:hover{
+    border: 2px solid var(--dblue);
+}
+
+
+
+  
+.top-row li:hover {
+    color: var(--dblue); /* Hover effect */
+}
+.top-row li.active {
+    color: var(--dblue);
+    border-bottom: 2px solid var(--dblue);
+}
+.abc>img{
+    transition: transform 0.3s ease;
+}
+.abc>img:hover{
+    transform: rotate(180deg);
+}
